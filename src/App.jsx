@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <div className='flex items-center gap-10 mb-10'>
+      <div className='flex flex-col md:flex-row items-center gap-10 mb-10'>
         <img src="/images/gradient_logo.png" alt="" className='max-h-52 h-full' />
         <div>
           <span className="text-3xl font-light ">AWS User Group</span> <br />
