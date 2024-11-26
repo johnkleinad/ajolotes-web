@@ -7,7 +7,6 @@
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: linear-gradient(-45deg, #171d2d, #170839);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -16,63 +15,62 @@
     radial-gradient(at 0% 64%, #000661ce 0px, transparent 85%),
     radial-gradient(at 41% 94%, #0098ff 0px, transparent 75%),
     radial-gradient(at 100% 99%, #ec00ff 0px, transparent 85%);
-  border-radius: 1rem;
   box-shadow: 0px -6px 24px 0px #e9e7e72f inset;
 }
 @font-face {
-  font-family: 'Amazon Ember';
+  font-family: "Amazon Ember";
   font-style: normal;
   font-weight: 100;
-  src: url('./assets/fonts/AmazonEmber-Thin.ttf') format('truetype');
+  src: url("./assets/fonts/AmazonEmber-Thin.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Amazon Ember';
+  font-family: "Amazon Ember";
   font-style: normal;
   font-weight: 300;
-  src: url('./assets/fonts/AmazonEmber-Light.ttf') format('truetype');
+  src: url("./assets/fonts/AmazonEmber-Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Amazon Ember';
+  font-family: "Amazon Ember";
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/fonts/AmazonEmber-Regular.ttf') format('truetype');
+  src: url("./assets/fonts/AmazonEmber-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Amazon Ember';
+  font-family: "Amazon Ember";
   font-style: italic;
   font-weight: 400;
-  src: url('./assets/fonts/AmazonEmber-Italic.ttf') format('truetype');
+  src: url("./assets/fonts/AmazonEmber-Italic.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Amazon Ember';
+  font-family: "Amazon Ember";
   font-style: normal;
   font-weight: 500;
-  src: url('./assets/fonts/AmazonEmber-Medium.ttf') format('truetype');
+  src: url("./assets/fonts/AmazonEmber-Medium.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Amazon Ember';
+  font-family: "Amazon Ember";
   font-style: normal;
   font-weight: 700;
-  src: url('./assets/fonts/AmazonEmber-Bold.ttf') format('truetype');
+  src: url("./assets/fonts/AmazonEmber-Bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Amazon Ember';
+  font-family: "Amazon Ember";
   font-style: normal;
   font-weight: 900;
-  src: url('./assets/fonts/AmazonEmber-Heavy.ttf') format('truetype');
+  src: url("./assets/fonts/AmazonEmber-Heavy.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Amazon Ember Mono';
+  font-family: "Amazon Ember Mono";
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/fonts/AmazonEmber-Mono.ttf') format('truetype');
+  src: url("./assets/fonts/AmazonEmber-Mono.ttf") format("truetype");
 }
 
 body {
