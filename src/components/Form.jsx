@@ -1,21 +1,16 @@
 import React, { useState } from 'react';
 
-const Form = () => {
-    const [formData, setFormData] = useState({ name: '', email: '', meetupUser: '', attendedMeetup: false });
+const VolunteerForm = () => {
+    const [formData, setFormData] = useState({ name: '', email: '', helpMessage: '' });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-
-        if (name === 'attendedMeetup') {
-            setFormData((prevData) => ({ ...prevData, [name]: value === 'true' }));
-        } else {
-            setFormData((prevData) => ({ ...prevData, [name]: value }));
-        }
+        setFormData((prevData) => ({ ...prevData, [name]: value }));
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!formData.name || !formData.email || !formData.meetupUser) {
+        if (!formData.name || !formData.email || !formData.helpMessage) {
             alert('Por favor, completa todos los campos.');
             return;
         }
@@ -27,7 +22,7 @@ const Form = () => {
             });
             if (response.ok) {
                 alert('Formulario enviado. ¡Gracias!');
-                setFormData({ name: '', email: '', meetupUser: '', attendedMeetup: false });
+                setFormData({ name: '', email: '', helpMessage: '' });
             } else {
                 alert('Hubo un error al enviar el formulario. Inténtalo de nuevo.');
             }
@@ -39,7 +34,7 @@ const Form = () => {
 
     return (
         <div className="max-w-md mx-auto shadow-lg rounded-md mt-10">
-            <h2 className="text-3xl font-bold text-center mb-4">Regístrate para obtener un lugar en nuestra posada!</h2>
+            <h2 className="text-3xl font-bold text-center mb-4">¡Hazte voluntario y ayuda a nuestra comunidad!</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                     <label htmlFor="name" className="block text-sm font-medium text-left">
@@ -52,7 +47,7 @@ const Form = () => {
                         value={formData.name}
                         onChange={handleChange}
                         className="mt-1 p-2 w-full border rounded"
-                        placeholder="Nombre"
+                        placeholder="Nombre y apellido"
                         required
                     />
                 </div>
@@ -72,36 +67,18 @@ const Form = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="meetupUser" className="block text-sm font-medium text-left">
-                        Usuario de Meetup
+                    <label htmlFor="helpMessage" className="block text-sm font-medium text-left">
+                        ¿Cómo quieres ayudar a la comunidad?
                     </label>
-                    <input
-                        id="meetupUser"
-                        name="meetupUser"
-                        type="text"
-                        value={formData.meetupUser}
+                    <textarea
+                        id="helpMessage"
+                        name="helpMessage"
+                        value={formData.helpMessage}
                         onChange={handleChange}
                         className="mt-1 p-2 w-full border rounded"
-                        placeholder="Usuario de Meetup"
+                        placeholder="Escribe aquí cómo te gustaría ayudar"
                         required
                     />
-                </div>
-                <div>
-                    <label htmlFor="attendedMeetup" className="block text-sm font-medium text-left">
-                        ¿Has asistido a nuestros Meetups?
-                    </label>
-                    <select
-                        id="attendedMeetup"
-                        name="attendedMeetup"
-                        value={formData.attendedMeetup}
-                        onChange={handleChange}
-                        className="mt-1 p-2 w-full border rounded"
-                        required
-                    >
-                        <option value="">Selecciona una opción</option>
-                        <option value="true">Sí</option>
-                        <option value="false">No</option>
-                    </select>
                 </div>
                 <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded-full hover:bg-blue-700 transition">
                     Enviar
@@ -111,4 +88,4 @@ const Form = () => {
     );
 };
 
-export default Form;
+export default VolunteerForm;
