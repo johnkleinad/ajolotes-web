@@ -63,7 +63,6 @@ function App() {
       <span className="text-2xl font-light">
         Próximamente nuestra web oficial
       </span>
-      <Form />
     </div>
   );
 }
